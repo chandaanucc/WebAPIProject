@@ -1,0 +1,253 @@
+2024-03-21 11:22:00.866 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-21 11:22:01.301 +05:30 [INF] Now listening on: http://localhost:5215
+2024-03-21 11:22:01.304 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-21 11:22:01.304 +05:30 [INF] Hosting environment: Development
+2024-03-21 11:22:01.305 +05:30 [INF] Content root path: D:\Documents\dotnetfiles\LayerProject\layers\tables\villa\villaa
+2024-03-21 11:23:39.125 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/ - null null
+2024-03-21 11:23:39.187 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-03-21 11:23:40.550 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/ - 404 0 null 1427.1078ms
+2024-03-21 11:23:40.558 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/, Response status code: 404
+2024-03-21 11:24:04.695 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/ - null null
+2024-03-21 11:24:04.701 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/ - 404 0 null 6.6333ms
+2024-03-21 11:24:04.702 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/, Response status code: 404
+2024-03-21 11:24:09.120 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 11:24:09.222 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 101.1215ms
+2024-03-21 11:24:09.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 11:24:09.285 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.9949ms
+2024-03-21 11:24:09.507 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 11:24:09.594 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.8643ms
+2024-03-21 11:26:14.552 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/Upload Image/mark?commentText=hi - multipart/form-data; boundary=----WebKitFormBoundaryfJHszzID7HcKAGOs 323694
+2024-03-21 11:26:14.559 +05:30 [INF] CORS policy execution failed.
+2024-03-21 11:26:14.559 +05:30 [INF] Request origin http://localhost:5215 does not have permission to access the resource.
+2024-03-21 11:26:14.571 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 11:26:14.610 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(Microsoft.AspNetCore.Http.IFormFile, System.String, System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 11:26:17.379 +05:30 [INF] Executed DbCommand (138ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RegistrationId], [r].[Email], [r].[IsActive], [r].[Password], [r].[UserName]
+FROM [RegisteredUsers] AS [r]
+WHERE [r].[UserName] = @__username_0
+2024-03-21 11:26:17.672 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = -1) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 8000) (DbType = Binary), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MediaUploads] ([CommentText], [FileId], [ImageContent], [ImageName], [MediaId], [RegistrationId], [UploadedAt], [UserName], [VideoContent], [VideoName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-21 11:26:17.695 +05:30 [INF] Image added successfully
+2024-03-21 11:26:17.696 +05:30 [INF] Image uploaded successfully
+2024-03-21 11:26:17.704 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-03-21 11:26:17.712 +05:30 [INF] Executed action villa.Controllers.ImageController.UploadImage (villaa) in 3097.1442ms
+2024-03-21 11:26:17.713 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 11:26:17.725 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/Upload Image/mark?commentText=hi - 200 null text/plain; charset=utf-8 3172.6971ms
+2024-03-21 12:34:20.786 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 12:34:20.854 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 67.3903ms
+2024-03-21 12:34:20.884 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 12:34:20.889 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 5.3802ms
+2024-03-21 12:34:21.227 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 12:34:21.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.988ms
+2024-03-21 14:05:36.440 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 14:05:36.819 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 389.1387ms
+2024-03-21 14:05:36.866 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 14:05:37.010 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.2284ms
+2024-03-21 14:30:20.610 +05:30 [INF] Application is shutting down...
+2024-03-21 14:40:09.120 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-21 14:40:09.378 +05:30 [INF] Now listening on: http://localhost:5215
+2024-03-21 14:40:09.380 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-21 14:40:09.381 +05:30 [INF] Hosting environment: Development
+2024-03-21 14:40:09.381 +05:30 [INF] Content root path: D:\Documents\dotnetfiles\LayerProject\layers\tables\villa\villaa
+2024-03-21 14:41:16.111 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 14:41:16.125 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 16.6785ms
+2024-03-21 14:41:16.231 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 14:41:16.485 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 254.1116ms
+2024-03-21 14:41:19.268 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 14:41:19.362 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 94.6762ms
+2024-03-21 14:41:19.372 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 14:41:19.373 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.1214ms
+2024-03-21 14:41:19.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 14:41:19.435 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.6722ms
+2024-03-21 14:41:20.263 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 14:41:20.264 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 1.1616ms
+2024-03-21 14:41:20.284 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 14:41:20.284 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3486ms
+2024-03-21 14:41:20.330 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 14:41:20.337 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.3576ms
+2024-03-21 15:02:03.261 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/api/image/Upload Image/ - multipart/form-data; boundary=----WebKitFormBoundaryQ81x7WqOm2UiHwuu 328
+2024-03-21 15:02:03.277 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-03-21 15:02:03.279 +05:30 [INF] CORS policy execution successful.
+2024-03-21 15:02:03.406 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/api/image/Upload Image/ - 404 0 null 146.1694ms
+2024-03-21 15:02:03.409 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/api/image/Upload%20Image/, Response status code: 404
+2024-03-21 15:06:08.493 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/ - multipart/form-data; boundary=----WebKitFormBoundaryuTEGqEQreTVPdm8o 328
+2024-03-21 15:06:08.500 +05:30 [INF] CORS policy execution successful.
+2024-03-21 15:06:08.502 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/ - 404 0 null 9.2177ms
+2024-03-21 15:06:08.503 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Imageapi/image/Upload%20Image/, Response status code: 404
+2024-03-21 15:57:10.360 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/chandaanu - multipart/form-data; boundary=----WebKitFormBoundaryIYkxWXALCKHujuQn 373
+2024-03-21 15:57:10.390 +05:30 [INF] CORS policy execution successful.
+2024-03-21 15:57:10.429 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/chandaanu - 404 0 null 70.911ms
+2024-03-21 15:57:10.431 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Imageapi/image/Upload%20Image/chandaanu, Response status code: 404
+2024-03-21 15:57:36.570 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 15:57:36.700 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 130.7174ms
+2024-03-21 15:57:36.764 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 15:57:36.989 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 224.5286ms
+2024-03-21 15:58:19.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 15:58:19.381 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 42.4591ms
+2024-03-21 15:58:19.405 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 15:58:19.406 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.4878ms
+2024-03-21 15:58:19.493 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 15:58:19.505 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.1485ms
+2024-03-21 15:58:31.455 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 15:58:31.467 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 12.53ms
+2024-03-21 15:58:31.488 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 15:58:31.489 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3919ms
+2024-03-21 15:58:31.572 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 15:58:31.577 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.0185ms
+2024-03-21 16:00:34.034 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/Upload Image/example - multipart/form-data; boundary=----WebKitFormBoundaryeJykQdvEE3osqu0g 135
+2024-03-21 16:00:34.040 +05:30 [INF] CORS policy execution failed.
+2024-03-21 16:00:34.042 +05:30 [INF] Request origin http://localhost:5215 does not have permission to access the resource.
+2024-03-21 16:00:34.047 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 16:00:34.455 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(Microsoft.AspNetCore.Http.IFormFile, System.String, System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 16:00:34.727 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-21 16:00:34.756 +05:30 [INF] Executed action villa.Controllers.ImageController.UploadImage (villaa) in 294.8617ms
+2024-03-21 16:00:34.756 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 16:00:34.758 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/Upload Image/example - 400 null application/problem+json; charset=utf-8 724.3342ms
+2024-03-21 16:05:27.067 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/chandaanu - multipart/form-data; boundary=----WebKitFormBoundaryugB1GBgiATa9dHAd 372
+2024-03-21 16:05:27.068 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:05:27.068 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Imageapi/image/Upload Image/chandaanu - 404 0 null 1.7339ms
+2024-03-21 16:05:27.069 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Imageapi/image/Upload%20Image/chandaanu, Response status code: 404
+2024-03-21 16:27:13.116 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/Upload Image/ - multipart/form-data; boundary=----WebKitFormBoundaryEGwbAM30TkTzIviu 373
+2024-03-21 16:27:13.168 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:27:13.185 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/Upload Image/ - 404 0 null 73.5811ms
+2024-03-21 16:27:13.191 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/Upload%20Image/, Response status code: 404
+2024-03-21 16:27:40.388 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 16:27:40.451 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 63.412ms
+2024-03-21 16:27:40.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 16:27:40.522 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 7.0026ms
+2024-03-21 16:27:41.118 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 16:27:41.145 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.4854ms
+2024-03-21 16:28:25.284 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundaryAcLhyJqaP5tVcgy4 373
+2024-03-21 16:28:25.284 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:28:25.289 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/UploadImage/ - 404 0 null 0.8657ms
+2024-03-21 16:28:25.295 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/UploadImage/, Response status code: 404
+2024-03-21 16:30:34.162 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundaryxJHGXstd8DmUeKZ1 373
+2024-03-21 16:30:34.164 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:30:34.164 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 2.6593ms
+2024-03-21 16:30:34.165 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 16:43:55.651 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundarytBYBVvoBtiOyDvQo 373
+2024-03-21 16:43:55.660 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:43:56.038 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 387.5501ms
+2024-03-21 16:43:56.040 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 16:45:23.207 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/UploadImage/ - null null
+2024-03-21 16:45:23.603 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/UploadImage/ - 404 0 null 399.2083ms
+2024-03-21 16:45:23.604 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 16:46:26.421 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundaryiH9kvXIP45X83xKe 373
+2024-03-21 16:46:26.422 +05:30 [INF] CORS policy execution successful.
+2024-03-21 16:46:26.422 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 1.9247ms
+2024-03-21 16:46:26.423 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 16:46:39.478 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/UploadImage/ - null null
+2024-03-21 16:46:39.481 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/UploadImage/ - 404 0 null 2.2894ms
+2024-03-21 16:46:39.483 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 16:54:15.528 +05:30 [INF] Application is shutting down...
+2024-03-21 18:53:31.262 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-21 18:53:31.544 +05:30 [INF] Now listening on: http://localhost:5215
+2024-03-21 18:53:31.547 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-21 18:53:31.548 +05:30 [INF] Hosting environment: Development
+2024-03-21 18:53:31.548 +05:30 [INF] Content root path: D:\Documents\dotnetfiles\LayerProject\layers\tables\villa\villaa
+2024-03-21 18:53:31.801 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-21 18:53:32.151 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 441.7092ms
+2024-03-21 18:53:32.190 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-21 18:53:32.195 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 5.5216ms
+2024-03-21 18:53:32.427 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-21 18:53:32.795 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 367.638ms
+2024-03-21 18:54:05.677 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundaryHVJr41GfLi6MN9Sd 332
+2024-03-21 18:54:05.689 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-03-21 18:54:05.691 +05:30 [INF] CORS policy execution successful.
+2024-03-21 18:54:05.903 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 226.253ms
+2024-03-21 18:54:05.908 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 18:54:56.512 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundarytgJsRHaQJGucTAB5 368
+2024-03-21 18:54:56.517 +05:30 [INF] CORS policy execution successful.
+2024-03-21 18:54:56.520 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 7.9022ms
+2024-03-21 18:54:56.520 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 19:27:05.989 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundarypChpp3leYwQBoWUK 371
+2024-03-21 19:27:05.991 +05:30 [INF] CORS policy execution successful.
+2024-03-21 19:27:06.000 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 11.4583ms
+2024-03-21 19:27:06.001 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 19:52:48.725 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-21 19:52:48.879 +05:30 [INF] Now listening on: http://localhost:5215
+2024-03-21 19:52:48.881 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-21 19:52:48.881 +05:30 [INF] Hosting environment: Development
+2024-03-21 19:52:48.881 +05:30 [INF] Content root path: D:\Documents\dotnetfiles\LayerProject\layers\tables\villa\villaa
+2024-03-21 19:53:52.668 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/Mark?commentText=Test - multipart/form-data; boundary=----WebKitFormBoundarydoQ041iv6GemDuGg 62383
+2024-03-21 19:53:52.862 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-03-21 19:53:52.867 +05:30 [INF] CORS policy execution failed.
+2024-03-21 19:53:52.868 +05:30 [INF] Request origin http://localhost:5215 does not have permission to access the resource.
+2024-03-21 19:53:52.989 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 19:53:53.024 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(Microsoft.AspNetCore.Http.IFormFile, System.String, System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 19:53:55.410 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RegistrationId], [r].[Email], [r].[IsActive], [r].[Password], [r].[UserName]
+FROM [RegisteredUsers] AS [r]
+WHERE [r].[UserName] = @__username_0
+2024-03-21 19:53:55.743 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = -1) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 8000) (DbType = Binary), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MediaUploads] ([CommentText], [FileId], [ImageContent], [ImageName], [MediaId], [RegistrationId], [UploadedAt], [UserName], [VideoContent], [VideoName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-21 19:53:55.812 +05:30 [INF] Image added successfully
+2024-03-21 19:53:55.813 +05:30 [INF] Image uploaded successfully
+2024-03-21 19:53:55.823 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-03-21 19:53:55.839 +05:30 [INF] Executed action villa.Controllers.ImageController.UploadImage (villaa) in 2805.8941ms
+2024-03-21 19:53:55.841 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.UploadImage (villaa)'
+2024-03-21 19:53:55.854 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/Mark?commentText=Test - 200 null text/plain; charset=utf-8 3191.6556ms
+2024-03-21 19:58:03.367 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - multipart/form-data; boundary=----WebKitFormBoundaryed8XWQTfCmFK0M22 355
+2024-03-21 19:58:03.398 +05:30 [INF] CORS policy execution successful.
+2024-03-21 19:58:03.417 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Image/UploadImage/ - 404 0 null 49.0506ms
+2024-03-21 19:58:03.427 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5215/api/Image/UploadImage/, Response status code: 404
+2024-03-21 20:11:10.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Mark - null null
+2024-03-21 20:11:10.996 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:11:11.383 +05:30 [INF] Route matched with {action = "GetImageByUserName", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImageByUserName(System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 20:11:11.621 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[ImageContent], [m].[ImageName], [m].[MediaId], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[UserName] = @__username_0
+2024-03-21 20:11:11.647 +05:30 [INF] Image retrieved successfully for username: Mark
+2024-03-21 20:11:11.652 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-21 20:11:11.676 +05:30 [INF] Executed action villa.Controllers.ImageController.GetImageByUserName (villaa) in 272.1685ms
+2024-03-21 20:11:11.676 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:11:11.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Mark - 200 277058 image/jpeg 729.0481ms
+2024-03-21 20:14:08.123 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Ron - null null
+2024-03-21 20:14:08.126 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:14:08.127 +05:30 [INF] Route matched with {action = "GetImageByUserName", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImageByUserName(System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 20:14:10.983 +05:30 [INF] Executed DbCommand (2,330ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[ImageContent], [m].[ImageName], [m].[MediaId], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[UserName] = @__username_0
+2024-03-21 20:14:11.033 +05:30 [INF] Image retrieved successfully for username: Ron
+2024-03-21 20:14:11.035 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-21 20:14:11.036 +05:30 [INF] Executed action villa.Controllers.ImageController.GetImageByUserName (villaa) in 2905.9872ms
+2024-03-21 20:14:11.037 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:14:11.037 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Ron - 200 62202 image/jpeg 2914.247ms
+2024-03-21 20:14:48.662 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Ron - null null
+2024-03-21 20:14:48.674 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:14:48.675 +05:30 [INF] Route matched with {action = "GetImageByUserName", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImageByUserName(System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 20:14:48.688 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[ImageContent], [m].[ImageName], [m].[MediaId], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[UserName] = @__username_0
+2024-03-21 20:14:48.692 +05:30 [INF] Image retrieved successfully for username: Ron
+2024-03-21 20:14:48.692 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-21 20:14:48.698 +05:30 [INF] Executed action villa.Controllers.ImageController.GetImageByUserName (villaa) in 22.4792ms
+2024-03-21 20:14:48.698 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:14:48.699 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Ron - 200 62202 image/jpeg 36.9399ms
+2024-03-21 20:14:48.963 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/favicon.ico - null null
+2024-03-21 20:14:48.965 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/favicon.ico - 404 0 null 2.8576ms
+2024-03-21 20:14:48.965 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/favicon.ico, Response status code: 404
+2024-03-21 20:15:05.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Mark - null null
+2024-03-21 20:15:05.050 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:15:05.051 +05:30 [INF] Route matched with {action = "GetImageByUserName", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImageByUserName(System.String) on controller villa.Controllers.ImageController (villaa).
+2024-03-21 20:15:05.066 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[ImageContent], [m].[ImageName], [m].[MediaId], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[UserName] = @__username_0
+2024-03-21 20:15:05.089 +05:30 [INF] Image retrieved successfully for username: Mark
+2024-03-21 20:15:05.096 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-21 20:15:05.104 +05:30 [INF] Executed action villa.Controllers.ImageController.GetImageByUserName (villaa) in 52.8764ms
+2024-03-21 20:15:05.104 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageController.GetImageByUserName (villaa)'
+2024-03-21 20:15:05.104 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/Image/Get Image/Mark - 200 277058 image/jpeg 54.2523ms
+2024-03-21 21:47:56.096 +05:30 [INF] Application is shutting down...
