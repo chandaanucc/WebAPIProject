@@ -1,0 +1,120 @@
+2024-03-31 20:26:09.117 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-31 20:26:09.261 +05:30 [INF] Now listening on: http://localhost:5215
+2024-03-31 20:26:09.263 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-31 20:26:09.263 +05:30 [INF] Hosting environment: Development
+2024-03-31 20:26:09.263 +05:30 [INF] Content root path: D:\Documents\CRUD\DotnetAPI\BackendAPI\villaa
+2024-03-31 20:28:49.514 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/index.html - null null
+2024-03-31 20:28:49.712 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/index.html - 200 null text/html;charset=utf-8 200.0544ms
+2024-03-31 20:28:50.099 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-31 20:28:50.107 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 7.8879ms
+2024-03-31 20:28:50.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - null null
+2024-03-31 20:28:50.290 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.9119ms
+2024-03-31 20:29:20.629 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-03-31 20:29:20.643 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-03-31 20:29:20.646 +05:30 [INF] CORS policy execution successful.
+2024-03-31 20:29:22.157 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:22.180 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:23.821 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-03-31 20:29:23.826 +05:30 [INF] CORS policy execution successful.
+2024-03-31 20:29:23.829 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:23.829 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:24.919 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-03-31 20:29:24.920 +05:30 [INF] CORS policy execution successful.
+2024-03-31 20:29:24.923 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:24.924 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:25.590 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-03-31 20:29:25.590 +05:30 [INF] CORS policy execution successful.
+2024-03-31 20:29:25.591 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:25.591 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.582 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+2024-03-31 20:29:26.582 +05:30 [INF] Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+2024-03-31 20:29:26.582 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+2024-03-31 20:29:26.582 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+2024-03-31 20:29:26.647 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-31 20:29:26.647 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-31 20:29:26.647 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-31 20:29:26.647 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-31 20:29:26.663 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 969.7514ms
+2024-03-31 20:29:26.664 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 4479.6729ms
+2024-03-31 20:29:26.664 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 2830.6873ms
+2024-03-31 20:29:26.663 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 1736.2474ms
+2024-03-31 20:29:26.665 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:26.665 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:26.665 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:26.665 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-03-31 20:29:26.683 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 1093.5681ms
+2024-03-31 20:29:26.685 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 499 null application/json; charset=utf-8 1765.9022ms
+2024-03-31 20:29:26.685 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 499 null application/json; charset=utf-8 6054.4273ms
+2024-03-31 20:29:26.685 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 499 null application/json; charset=utf-8 2863.8641ms
+2024-03-31 20:29:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/null - null null
+2024-03-31 20:29:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1jyXxC5Coaq6_SsQR1PwK09jduHXrSo7S - null null
+2024-03-31 20:29:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1lcHY2mq-MNF0wKKE3BAfRAXAYq1Y-fbK - null null
+2024-03-31 20:29:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1xXKk97XWc3T5mQogjoEE23F22HgFXHWf - null null
+2024-03-31 20:29:26.701 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.702 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.702 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1HJ8ib83_rmrMXzRNGAaz7Rev4uDRx7kj - null null
+2024-03-31 20:29:26.702 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.707 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1E21zcMepZgPrdGkNnagH_ciytVxy10Ao - null null
+2024-03-31 20:29:26.708 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.708 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:26.720 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:32.705 +05:30 [INF] File downloaded successfully. File ID: null
+2024-03-31 20:29:32.708 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:32.743 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 6023.1157ms
+2024-03-31 20:29:32.744 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:32.745 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/null - 200 0 image/png 6044.3256ms
+2024-03-31 20:29:32.754 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/10HKTkswtYpTbohe6t2zTpqFH6RG_1_9k - null null
+2024-03-31 20:29:32.755 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:32.762 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:33.341 +05:30 [INF] File downloaded successfully. File ID: 1jyXxC5Coaq6_SsQR1PwK09jduHXrSo7S
+2024-03-31 20:29:33.341 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:33.342 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 6621.3766ms
+2024-03-31 20:29:33.343 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:33.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1jyXxC5Coaq6_SsQR1PwK09jduHXrSo7S - 200 10586 image/png 6642.5071ms
+2024-03-31 20:29:33.359 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1f9AFqC100yGZExQspIplHJibtcG4pGhR - null null
+2024-03-31 20:29:33.360 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:33.360 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-03-31 20:29:35.463 +05:30 [INF] File downloaded successfully. File ID: 1E21zcMepZgPrdGkNnagH_ciytVxy10Ao
+2024-03-31 20:29:35.464 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:35.464 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 8742.2573ms
+2024-03-31 20:29:35.466 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:35.467 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1E21zcMepZgPrdGkNnagH_ciytVxy10Ao - 200 10586 image/png 8766.0116ms
+2024-03-31 20:29:35.499 +05:30 [INF] File downloaded successfully. File ID: 1HJ8ib83_rmrMXzRNGAaz7Rev4uDRx7kj
+2024-03-31 20:29:35.499 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:35.499 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 8773.8894ms
+2024-03-31 20:29:35.499 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:35.499 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1HJ8ib83_rmrMXzRNGAaz7Rev4uDRx7kj - 200 10586 image/png 8798.6543ms
+2024-03-31 20:29:36.206 +05:30 [INF] File downloaded successfully. File ID: 1lcHY2mq-MNF0wKKE3BAfRAXAYq1Y-fbK
+2024-03-31 20:29:36.206 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:36.212 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 9491.5915ms
+2024-03-31 20:29:36.212 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:36.219 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1lcHY2mq-MNF0wKKE3BAfRAXAYq1Y-fbK - 200 62202 image/png 9518.1257ms
+2024-03-31 20:29:37.418 +05:30 [INF] File downloaded successfully. File ID: 10HKTkswtYpTbohe6t2zTpqFH6RG_1_9k
+2024-03-31 20:29:37.418 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:37.418 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 4655.3705ms
+2024-03-31 20:29:37.419 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:37.419 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/10HKTkswtYpTbohe6t2zTpqFH6RG_1_9k - 200 28598 image/png 4664.8536ms
+2024-03-31 20:29:37.932 +05:30 [INF] File downloaded successfully. File ID: 1f9AFqC100yGZExQspIplHJibtcG4pGhR
+2024-03-31 20:29:37.933 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:37.934 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 4572.8878ms
+2024-03-31 20:29:37.934 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:37.935 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1f9AFqC100yGZExQspIplHJibtcG4pGhR - 200 28598 image/png 4575.4766ms
+2024-03-31 20:29:38.196 +05:30 [INF] File downloaded successfully. File ID: 1xXKk97XWc3T5mQogjoEE23F22HgFXHWf
+2024-03-31 20:29:38.196 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-03-31 20:29:38.212 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 11491.4255ms
+2024-03-31 20:29:38.212 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-03-31 20:29:38.212 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1xXKk97XWc3T5mQogjoEE23F22HgFXHWf - 200 265685 image/png 11511.2127ms

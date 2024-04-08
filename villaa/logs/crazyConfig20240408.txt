@@ -1,0 +1,588 @@
+2024-04-08 09:46:43.926 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-08 09:46:44.075 +05:30 [INF] Now listening on: http://localhost:5215
+2024-04-08 09:46:44.078 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-08 09:46:44.078 +05:30 [INF] Hosting environment: Development
+2024-04-08 09:46:44.078 +05:30 [INF] Content root path: C:\Users\91974\Desktop\DEMO\DotnetAPI\BackendAPI\villaa
+2024-04-08 09:47:24.048 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/ - null null
+2024-04-08 09:47:24.152 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-04-08 09:47:24.790 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/ - 404 0 null 747.2699ms
+2024-04-08 09:47:24.798 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5215/, Response status code: 404
+2024-04-08 09:49:45.260 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - null null
+2024-04-08 09:49:45.266 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:49:45.271 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - 204 null null 11.5692ms
+2024-04-08 09:49:45.274 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 75
+2024-04-08 09:49:45.277 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:49:45.283 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:49:45.327 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:49:47.498 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RegistrationId], [r].[Email], [r].[IsActive], [r].[Password], [r].[UserName]
+FROM [RegisteredUsers] AS [r]
+WHERE [r].[UserName] = @__username_0 AND [r].[Password] = @__password_1
+2024-04-08 09:49:47.629 +05:30 [INF] User authenticated successfully
+2024-04-08 09:49:47.638 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-08 09:49:47.656 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 2322.4428ms
+2024-04-08 09:49:47.657 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:49:47.673 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 200 null application/json; charset=utf-8 2398.5074ms
+2024-04-08 09:50:00.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-04-08 09:50:00.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - null null
+2024-04-08 09:50:00.953 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:00.954 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:00.957 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:00.957 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:00.968 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetVideos() on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:00.968 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:02.268 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[FileName], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[VideoName] IS NULL
+2024-04-08 09:50:02.268 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileName] IS NULL
+2024-04-08 09:50:02.272 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:02.272 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:02.288 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 1319.9324ms
+2024-04-08 09:50:02.288 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 1319.8829ms
+2024-04-08 09:50:02.289 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:02.289 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:02.289 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 1340.7809ms
+2024-04-08 09:50:02.289 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - 200 null application/json; charset=utf-8 1340.7404ms
+2024-04-08 09:50:02.366 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:02.366 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6 - null null
+2024-04-08 09:50:02.367 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:02.367 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:02.374 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:02.374 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:02.399 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - null null
+2024-04-08 09:50:02.401 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:02.407 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetVideos(System.String) on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:04.013 +05:30 [INF] File downloaded successfully. File ID: 1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6
+2024-04-08 09:50:04.015 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:04.029 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1655.1452ms
+2024-04-08 09:50:04.030 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:04.030 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6 - 200 78488 image/png 1664.4213ms
+2024-04-08 09:50:04.370 +05:30 [INF] File downloaded successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:04.370 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:04.371 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1995.9327ms
+2024-04-08 09:50:04.371 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:04.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 36698 image/png 2005.7884ms
+2024-04-08 09:50:08.216 +05:30 [INF] File downloaded successfully. File ID: 1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn
+2024-04-08 09:50:08.216 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:08.235 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 5827.1855ms
+2024-04-08 09:50:08.235 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:08.235 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 200 5311384 video/mp4 5835.927ms
+2024-04-08 09:50:23.542 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:23.542 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:23.543 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:23.544 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:25.192 +05:30 [INF] File downloaded successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:25.192 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:25.193 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1648.9368ms
+2024-04-08 09:50:25.193 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:25.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 36698 image/png 1651.8395ms
+2024-04-08 09:50:29.717 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/update/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:29.717 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:29.717 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/update/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 204 null null 0.674ms
+2024-04-08 09:50:29.719 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5215/api/ImageGoogle/update/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - application/json 21
+2024-04-08 09:50:29.719 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:29.720 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.UpdateImage (villaa)'
+2024-04-08 09:50:29.725 +05:30 [INF] Route matched with {action = "UpdateImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateImage(System.String, UpdateImageDTO) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:29.830 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__fileId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[FileName], [m].[ImageContent], [m].[ImageName], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileId] = @__fileId_0
+2024-04-08 09:50:30.007 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 8000) (DbType = Binary), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [MediaUploads] SET [CommentText] = @p0, [FileId] = @p1, [FileName] = @p2, [ImageContent] = @p3, [ImageName] = @p4, [RegistrationId] = @p5, [UploadedAt] = @p6, [UserName] = @p7, [VideoContent] = @p8, [VideoName] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2024-04-08 09:50:30.018 +05:30 [INF] Image updated successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:30.025 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-08 09:50:30.025 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.UpdateImage (villaa) in 299.7004ms
+2024-04-08 09:50:30.025 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.UpdateImage (villaa)'
+2024-04-08 09:50:30.025 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5215/api/ImageGoogle/update/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 0 null 305.9403ms
+2024-04-08 09:50:30.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-04-08 09:50:30.047 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:30.048 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:30.048 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:30.051 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - null null
+2024-04-08 09:50:30.052 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:30.053 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:30.053 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetVideos() on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:30.073 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[FileName], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[VideoName] IS NULL
+2024-04-08 09:50:30.074 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileName] IS NULL
+2024-04-08 09:50:30.074 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:30.074 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:30.074 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 25.2056ms
+2024-04-08 09:50:30.074 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 20.2683ms
+2024-04-08 09:50:30.075 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:30.075 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:30.076 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - 200 null application/json; charset=utf-8 24.7978ms
+2024-04-08 09:50:30.076 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 29.2472ms
+2024-04-08 09:50:30.085 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:30.086 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:30.086 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:30.099 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - null null
+2024-04-08 09:50:30.100 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:30.100 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetVideos(System.String) on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:31.544 +05:30 [INF] File downloaded successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:31.545 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:31.545 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1458.2306ms
+2024-04-08 09:50:31.545 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:31.545 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 36698 image/png 1459.8211ms
+2024-04-08 09:50:34.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/download/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:34.517 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.DownloadImage (villaa)'
+2024-04-08 09:50:34.526 +05:30 [INF] Route matched with {action = "DownloadImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:34.857 +05:30 [INF] File downloaded successfully. File ID: 1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn
+2024-04-08 09:50:34.857 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:34.884 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 4782.8376ms
+2024-04-08 09:50:34.884 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:34.884 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 200 5311384 video/mp4 4785.0989ms
+2024-04-08 09:50:35.948 +05:30 [INF] File downloaded successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:35.948 +05:30 [INF] Executing FileContentResult, sending file with download name 'image.png' ...
+2024-04-08 09:50:35.955 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.DownloadImage (villaa) in 1428.6335ms
+2024-04-08 09:50:35.955 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.DownloadImage (villaa)'
+2024-04-08 09:50:35.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/download/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 36698 application/octet-stream 1439.7815ms
+2024-04-08 09:50:36.666 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - null null
+2024-04-08 09:50:36.667 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:36.667 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:36.667 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:40.246 +05:30 [INF] File downloaded successfully. File ID: 1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn
+2024-04-08 09:50:40.247 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:40.259 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 3591.6526ms
+2024-04-08 09:50:40.259 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:40.260 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 200 5311384 image/png 3593.3874ms
+2024-04-08 09:50:41.395 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/update/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - null null
+2024-04-08 09:50:41.395 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:41.395 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/update/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 204 null null 0.3884ms
+2024-04-08 09:50:41.397 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5215/api/ImageGoogle/update/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - application/json 19
+2024-04-08 09:50:41.397 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:41.397 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.UpdateImage (villaa)'
+2024-04-08 09:50:41.397 +05:30 [INF] Route matched with {action = "UpdateImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateImage(System.String, UpdateImageDTO) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:41.405 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__fileId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[FileName], [m].[ImageContent], [m].[ImageName], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileId] = @__fileId_0
+2024-04-08 09:50:41.415 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 8000) (DbType = Binary), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [MediaUploads] SET [CommentText] = @p0, [FileId] = @p1, [FileName] = @p2, [ImageContent] = @p3, [ImageName] = @p4, [RegistrationId] = @p5, [UploadedAt] = @p6, [UserName] = @p7, [VideoContent] = @p8, [VideoName] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2024-04-08 09:50:41.417 +05:30 [INF] Image updated successfully. File ID: 1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn
+2024-04-08 09:50:41.417 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-08 09:50:41.417 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.UpdateImage (villaa) in 20.3518ms
+2024-04-08 09:50:41.418 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.UpdateImage (villaa)'
+2024-04-08 09:50:41.418 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5215/api/ImageGoogle/update/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 200 0 null 21.0948ms
+2024-04-08 09:50:41.435 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-04-08 09:50:41.435 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:41.435 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:41.436 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:41.443 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - null null
+2024-04-08 09:50:41.443 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:41.444 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:41.445 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetVideos() on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:41.455 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[FileName], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[VideoName] IS NULL
+2024-04-08 09:50:41.456 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:41.456 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 20.2911ms
+2024-04-08 09:50:41.456 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:41.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 22.1022ms
+2024-04-08 09:50:41.472 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileName] IS NULL
+2024-04-08 09:50:41.473 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:41.474 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 28.1208ms
+2024-04-08 09:50:41.474 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:41.474 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - 200 null application/json; charset=utf-8 31.4126ms
+2024-04-08 09:50:41.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - null null
+2024-04-08 09:50:41.483 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:41.483 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetVideos(System.String) on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:44.216 +05:30 [INF] File downloaded successfully. File ID: 1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn
+2024-04-08 09:50:44.217 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:44.237 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 2754.0383ms
+2024-04-08 09:50:44.238 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:44.238 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/viewvideos/1jmr7ovoWewRpMYLiNVk5Mia6zvf3UIWn - 200 5311384 video/mp4 2755.2885ms
+2024-04-08 09:50:45.172 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/delete/1042 - null null
+2024-04-08 09:50:45.172 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:45.172 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/ImageGoogle/delete/1042 - 204 null null 0.5834ms
+2024-04-08 09:50:45.174 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5215/api/ImageGoogle/delete/1042 - null null
+2024-04-08 09:50:45.175 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:45.175 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.DeleteImage (villaa)'
+2024-04-08 09:50:45.184 +05:30 [INF] Route matched with {action = "DeleteImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteImage(Int32) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:45.276 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[CommentText], [m].[FileId], [m].[FileName], [m].[ImageContent], [m].[ImageName], [m].[RegistrationId], [m].[UploadedAt], [m].[UserName], [m].[VideoContent], [m].[VideoName]
+FROM [MediaUploads] AS [m]
+WHERE [m].[Id] = @__p_0
+2024-04-08 09:50:45.306 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [MediaUploads]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-04-08 09:50:45.311 +05:30 [INF] Image deleted successfully. ID: 1042
+2024-04-08 09:50:45.311 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-08 09:50:45.312 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.DeleteImage (villaa) in 127.4639ms
+2024-04-08 09:50:45.312 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.DeleteImage (villaa)'
+2024-04-08 09:50:45.312 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5215/api/ImageGoogle/delete/1042 - 200 0 null 137.9217ms
+2024-04-08 09:50:45.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-04-08 09:50:45.319 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:45.319 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:45.319 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:45.325 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[FileName], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[VideoName] IS NULL
+2024-04-08 09:50:45.326 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:45.326 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 6.6424ms
+2024-04-08 09:50:45.326 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:45.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 9.2714ms
+2024-04-08 09:50:45.601 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - null null
+2024-04-08 09:50:45.602 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:45.602 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:45.603 +05:30 [INF] Route matched with {action = "GetImages", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetImages() on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:45.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - null null
+2024-04-08 09:50:45.604 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:45.604 +05:30 [INF] Executing endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:45.605 +05:30 [INF] Route matched with {action = "GetVideos", controller = "VideoGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetVideos() on controller villa.Controllers.VideoGoogleController (villaa).
+2024-04-08 09:50:45.623 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[FileName] IS NULL
+2024-04-08 09:50:45.623 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:45.625 +05:30 [INF] Executed action villa.Controllers.VideoGoogleController.GetVideos (villaa) in 20.3411ms
+2024-04-08 09:50:45.625 +05:30 [INF] Executed endpoint 'villa.Controllers.VideoGoogleController.GetVideos (villaa)'
+2024-04-08 09:50:45.626 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/VideoGoogle/videos - 200 null application/json; charset=utf-8 22.5335ms
+2024-04-08 09:50:45.627 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[FileId], [m].[FileName], [m].[UserName] AS [Username], [m].[CommentText]
+FROM [MediaUploads] AS [m]
+WHERE [m].[VideoName] IS NULL
+2024-04-08 09:50:45.629 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], villaa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-08 09:50:45.630 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImages (villaa) in 25.2843ms
+2024-04-08 09:50:45.633 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImages (villaa)'
+2024-04-08 09:50:45.634 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/images - 200 null application/json; charset=utf-8 32.5703ms
+2024-04-08 09:50:45.645 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - null null
+2024-04-08 09:50:45.646 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:45.647 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:45.649 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6 - null null
+2024-04-08 09:50:45.649 +05:30 [INF] Executing endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:45.650 +05:30 [INF] Route matched with {action = "GetImage", controller = "ImageGoogle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller villa.Controllers.ImageGoogleController (villaa).
+2024-04-08 09:50:46.888 +05:30 [INF] File downloaded successfully. File ID: 1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o
+2024-04-08 09:50:46.888 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:46.888 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1241.4574ms
+2024-04-08 09:50:46.888 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:46.888 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1IywUY4z3Afhqy3LqoeG36ajZe4DrYm0o - 200 36698 image/png 1243.2925ms
+2024-04-08 09:50:47.479 +05:30 [INF] File downloaded successfully. File ID: 1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6
+2024-04-08 09:50:47.479 +05:30 [INF] Executing FileContentResult, sending file with download name '' ...
+2024-04-08 09:50:47.480 +05:30 [INF] Executed action villa.Controllers.ImageGoogleController.GetImage (villaa) in 1830.1915ms
+2024-04-08 09:50:47.480 +05:30 [INF] Executed endpoint 'villa.Controllers.ImageGoogleController.GetImage (villaa)'
+2024-04-08 09:50:47.480 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5215/api/ImageGoogle/viewimages/1-Hi9dhXqS2tCiX9UcPNi9m24YIzXagv6 - 200 78488 image/png 1831.8282ms
+2024-04-08 09:50:57.019 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - null null
+2024-04-08 09:50:57.021 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:57.021 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - 204 null null 1.7143ms
+2024-04-08 09:50:57.023 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 40
+2024-04-08 09:50:57.023 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:50:57.023 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:50:57.024 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:50:57.043 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 09:50:57.080 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 56.7733ms
+2024-04-08 09:50:57.081 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:50:57.081 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 400 null application/problem+json; charset=utf-8 57.8515ms
+2024-04-08 09:51:16.071 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - null null
+2024-04-08 09:51:16.071 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:51:16.072 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - 204 null null 0.834ms
+2024-04-08 09:51:16.073 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 62
+2024-04-08 09:51:16.074 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:51:16.074 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:51:16.074 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:51:16.080 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 09:51:16.080 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 5.54ms
+2024-04-08 09:51:16.080 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 09:51:16.080 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 400 null application/problem+json; charset=utf-8 6.7431ms
+2024-04-08 09:52:55.409 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:52:55.410 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:52:55.410 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.4315ms
+2024-04-08 09:52:55.412 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 69
+2024-04-08 09:52:55.412 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:52:55.412 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:52:55.419 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:52:55.476 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:52:55.487 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:52:55.541 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegisteredUsers] ([Email], [IsActive], [Password], [UserName])
+OUTPUT INSERTED.[RegistrationId]
+VALUES (@p0, @p1, @p2, @p3);
+2024-04-08 09:52:55.562 +05:30 [INF] User created successfully
+2024-04-08 09:52:55.562 +05:30 [INF] User registration successful
+2024-04-08 09:52:55.562 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-08 09:52:55.563 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 144.3289ms
+2024-04-08 09:52:55.563 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:52:55.563 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 200 null text/plain; charset=utf-8 151.8849ms
+2024-04-08 09:53:25.147 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:53:25.147 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:53:25.147 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.4268ms
+2024-04-08 09:53:25.149 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 71
+2024-04-08 09:53:25.149 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:53:25.149 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:53:25.150 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:53:25.163 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:53:25.164 +05:30 [WRN] User with the same UserName already registered
+2024-04-08 09:53:25.165 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-04-08 09:53:25.165 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 15.5194ms
+2024-04-08 09:53:25.165 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:53:25.165 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 400 null text/plain; charset=utf-8 16.3361ms
+2024-04-08 09:53:39.467 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:53:39.467 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:53:39.468 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.5235ms
+2024-04-08 09:53:39.470 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 71
+2024-04-08 09:53:39.470 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:53:39.470 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:53:39.471 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:53:39.475 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:53:39.475 +05:30 [WRN] User with the same UserName already registered
+2024-04-08 09:53:39.475 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-04-08 09:53:39.476 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 5.0007ms
+2024-04-08 09:53:39.476 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:53:39.476 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 400 null text/plain; charset=utf-8 6.2203ms
+2024-04-08 09:54:16.114 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:54:16.114 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:54:16.114 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.4358ms
+2024-04-08 09:54:16.116 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 75
+2024-04-08 09:54:16.116 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:54:16.117 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:54:16.117 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:54:16.124 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:54:16.131 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:54:16.142 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegisteredUsers] ([Email], [IsActive], [Password], [UserName])
+OUTPUT INSERTED.[RegistrationId]
+VALUES (@p0, @p1, @p2, @p3);
+2024-04-08 09:54:16.143 +05:30 [INF] User created successfully
+2024-04-08 09:54:16.143 +05:30 [INF] User registration successful
+2024-04-08 09:54:16.143 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-08 09:54:16.143 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 26.5672ms
+2024-04-08 09:54:16.143 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:54:16.144 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 200 null text/plain; charset=utf-8 27.5875ms
+2024-04-08 09:55:35.263 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:55:35.264 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:55:35.264 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.5913ms
+2024-04-08 09:55:35.266 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 82
+2024-04-08 09:55:35.267 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:55:35.267 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:55:35.267 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:55:35.269 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 09:55:35.269 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 1.8019ms
+2024-04-08 09:55:35.269 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:55:35.270 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 400 null application/problem+json; charset=utf-8 3.2175ms
+2024-04-08 09:55:53.902 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:55:53.902 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:55:53.903 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 1.0056ms
+2024-04-08 09:55:53.905 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 82
+2024-04-08 09:55:53.905 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:55:53.905 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:55:53.906 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:55:53.907 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 09:55:53.908 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 1.8065ms
+2024-04-08 09:55:53.908 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:55:53.908 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 400 null application/problem+json; charset=utf-8 3.388ms
+2024-04-08 09:58:35.613 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 09:58:35.614 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:58:35.614 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.558ms
+2024-04-08 09:58:35.616 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 72
+2024-04-08 09:58:35.616 +05:30 [INF] CORS policy execution successful.
+2024-04-08 09:58:35.616 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:58:35.616 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 09:58:35.663 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:58:35.674 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 09:58:35.689 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegisteredUsers] ([Email], [IsActive], [Password], [UserName])
+OUTPUT INSERTED.[RegistrationId]
+VALUES (@p0, @p1, @p2, @p3);
+2024-04-08 09:58:35.689 +05:30 [INF] User created successfully
+2024-04-08 09:58:35.689 +05:30 [INF] User registration successful
+2024-04-08 09:58:35.690 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-08 09:58:35.690 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 73.4364ms
+2024-04-08 09:58:35.691 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 09:58:35.692 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 200 null text/plain; charset=utf-8 76.3286ms
+2024-04-08 10:04:03.191 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 10:04:03.202 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:04:03.202 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 11.2248ms
+2024-04-08 10:04:03.204 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 69
+2024-04-08 10:04:03.205 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:04:03.205 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 10:04:03.205 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 10:04:03.259 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 10:04:03.263 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 10:04:03.273 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegisteredUsers] ([Email], [IsActive], [Password], [UserName])
+OUTPUT INSERTED.[RegistrationId]
+VALUES (@p0, @p1, @p2, @p3);
+2024-04-08 10:04:03.273 +05:30 [INF] User created successfully
+2024-04-08 10:04:03.274 +05:30 [INF] User registration successful
+2024-04-08 10:04:03.274 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-08 10:04:03.274 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 68.9672ms
+2024-04-08 10:04:03.274 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 10:04:03.274 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 200 null text/plain; charset=utf-8 70.7054ms
+2024-04-08 10:04:45.374 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - null null
+2024-04-08 10:04:45.374 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:04:45.375 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/AddUser - 204 null null 0.5208ms
+2024-04-08 10:04:45.377 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - application/json 69
+2024-04-08 10:04:45.380 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:04:45.380 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 10:04:45.393 +05:30 [INF] Route matched with {action = "AddUser", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUser(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 10:04:45.417 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[UserName] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 10:04:45.426 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RegisteredUsers] AS [r]
+        WHERE [r].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-08 10:04:45.433 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RegisteredUsers] ([Email], [IsActive], [Password], [UserName])
+OUTPUT INSERTED.[RegistrationId]
+VALUES (@p0, @p1, @p2, @p3);
+2024-04-08 10:04:45.434 +05:30 [INF] User created successfully
+2024-04-08 10:04:45.436 +05:30 [INF] User registration successful
+2024-04-08 10:04:45.436 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-08 10:04:45.437 +05:30 [INF] Executed action villa.Controllers.RegistrationController.AddUser (villaa) in 43.8902ms
+2024-04-08 10:04:45.437 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.AddUser (villaa)'
+2024-04-08 10:04:45.437 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/AddUser - 200 0 null 60.2038ms
+2024-04-08 10:16:51.792 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-08 10:16:52.103 +05:30 [INF] Now listening on: http://localhost:5215
+2024-04-08 10:16:52.105 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-08 10:16:52.106 +05:30 [INF] Hosting environment: Development
+2024-04-08 10:16:52.106 +05:30 [INF] Content root path: C:\Users\91974\Desktop\DEMO\DotnetAPI\BackendAPI\villaa
+2024-04-08 10:21:08.363 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - null null
+2024-04-08 10:21:08.410 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-04-08 10:21:08.413 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:21:08.419 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5215/api/Registration/Login - 204 null null 58.6426ms
+2024-04-08 10:21:08.427 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 40
+2024-04-08 10:21:08.434 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:21:08.477 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:08.518 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 10:21:08.908 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 10:21:08.936 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 414.1723ms
+2024-04-08 10:21:08.937 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:08.941 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 400 null application/problem+json; charset=utf-8 513.4665ms
+2024-04-08 10:21:09.282 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 40
+2024-04-08 10:21:09.285 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:21:09.289 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:09.290 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 10:21:09.310 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 10:21:09.311 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 20.0933ms
+2024-04-08 10:21:09.311 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:09.312 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 400 null application/problem+json; charset=utf-8 29.3656ms
+2024-04-08 10:21:12.557 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5215/api/Registration/Login - application/json 40
+2024-04-08 10:21:12.558 +05:30 [INF] CORS policy execution successful.
+2024-04-08 10:21:12.561 +05:30 [INF] Executing endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:12.562 +05:30 [INF] Route matched with {action = "Login", controller = "Registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DataLayer.Models.Registration) on controller villa.Controllers.RegistrationController (villaa).
+2024-04-08 10:21:12.570 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-08 10:21:12.571 +05:30 [INF] Executed action villa.Controllers.RegistrationController.Login (villaa) in 8.7202ms
+2024-04-08 10:21:12.571 +05:30 [INF] Executed endpoint 'villa.Controllers.RegistrationController.Login (villaa)'
+2024-04-08 10:21:12.571 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5215/api/Registration/Login - 400 null application/problem+json; charset=utf-8 14.1634ms
+2024-04-08 10:25:38.112 +05:30 [INF] Application is shutting down...
+2024-04-08 10:27:45.943 +05:30 [INF] User profile is available. Using 'C:\Users\91974\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-08 10:27:46.062 +05:30 [INF] Now listening on: http://localhost:5215
+2024-04-08 10:27:46.064 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-08 10:27:46.064 +05:30 [INF] Hosting environment: Development
+2024-04-08 10:27:46.065 +05:30 [INF] Content root path: C:\Users\91974\Desktop\DEMO\DotnetAPI\BackendAPI\villaa
+2024-04-08 10:29:25.075 +05:30 [INF] Application is shutting down...
